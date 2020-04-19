@@ -59,7 +59,7 @@ const Movies = ({ posts }) => {
                 <Row gutter={[ 16,24 ]}>
 
                     {posts.map(post => (
-                        <Col xs={{ span: 12 }} sm={{ span: 12 }} md={{ span: 8 }} lg={{ span: 8 }} xl={{ span:6 }} key={post.id}>
+                        <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} lg={{ span: 8 }} xl={{ span:6 }} key={post.id}>
                             <div className="card_holder">
                                 <div className="card">
                                     <div className="card_img_top">

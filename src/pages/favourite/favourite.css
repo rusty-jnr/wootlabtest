@@ -114,7 +114,10 @@
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.782);
     transition: all .4s ease-in-out;
+    justify-content: center;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .favourite_card_holder .card:hover .card_body{
     opacity: 1;
@@ -127,6 +130,11 @@
     padding: 10px;
     list-style: none;
     font-size: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+}
+.favourite_card_holder .card .card_body .title_date ul li{
+    font-size: 11px;
 }
 .title_date button{
     background-color: #060A33;
@@ -150,31 +158,39 @@
 }
 .favourite_card_holder .card .card_body .runtime{
     padding: 10px;
-    margin-top: 10px;
     font-family: 'gothambook';
+}
+.favourite_card_holder .card .card_body .runtime p{
+    margin-bottom: 0px;
+    font-size: 13px;
 }
 .favourite_card_holder .card .card_body .overview{
     padding: 10px;
-    margin-top: 10px;
     font-family: 'gothambook';
     font-size: 13px;
 }
+.favourite_card_holder .card .card_body .overview p{
+    margin-bottom: 0px;
+}
 .favourite_card_holder .card .card_body .release_date{
     padding: 10px;
-    margin-top: 10px;
     font-family: 'gothambook';
 }
-.favourite_card_holder .card .card_body .release_date p:nth-child(1){
+.favourite_card_holder .card .card_body .release_date p{
     margin-bottom: 0px;
     font-family: 'gothammedium';
+    font-size: 13px;
+}
+.favourite_card_holder .card .card_body .release_date p:nth-child(2){
+    margin-bottom: 0px;
+    font-family: 'gothammedium';
+    font-size: 11px;
 }
 .favourite_card_holder .card .card_body .read_more{
-    padding: 10px;
     margin-top: 10px;
     font-family: 'gothambook';
 }
 .read_more button{
-    margin-top: 40px;
     background-color: #060A33;
     border: 1px solid #060A33;
     width: 60%;
