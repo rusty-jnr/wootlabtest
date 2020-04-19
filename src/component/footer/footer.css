@@ -1,0 +1,42 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+.ant-layout-footer {
+    padding: 0px 0px 0px 0px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    background: #EAF0FB;
+    overflow: hidden;
+}
+.footer_bottom{
+    background-color: #FFFFFF;
+    padding: 10px 50px;
+    box-shadow: 0px 0px 3px #0000001f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+}
+.footer_bottom ul{
+    background-color: transparent;
+    display: flex;
+    margin-bottom: 0px;
+}
+.footer_bottom ul li{
+    padding: 6px;
+    list-style: none;
+    cursor: pointer;
+    color: black;
+}
+.footer{
+    margin-top: auto;
+}
+@media(max-width: 425px){
+    .footer_bottom{
+        display: block;
+    }
+}

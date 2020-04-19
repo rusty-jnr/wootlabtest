@@ -1,0 +1,199 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+.login_banner{
+    background-image: url(../../assets/img/netflix-background-9.jpg);
+    min-height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center top;
+    background-attachment: fixed;
+}
+.login_banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(28,2,2);
+    background: radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -moz-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -webkit-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -o-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+}
+.login_banner_header{
+    z-index: 3;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.login_banner_header .logo ul{
+    margin-top: 6px;
+    padding-left: 0px;
+    margin-bottom: 6px;
+    list-style: none;
+}
+.login_banner_header .logo img{
+    width: 60px;
+    cursor: pointer;
+}
+.login_banner_form{
+    padding: 20px 20px;
+    color: white;
+    z-index: 3;
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+.login_form_row{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -30px -8px 12px !important;
+}
+.login_form_holder{
+    padding: 60px 30px 40px !important;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 5px;
+}
+.login_logo{
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+.login_logo img{
+    width: 60px;
+}
+.login_logo h4{
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+.login_logo p{
+    font-size: 13px;
+    font-family: 'gothamthin';
+    letter-spacing: -1px;
+}
+.login_inputs{
+    margin-top: 10px;
+}
+.login_inputs .ant-input{
+    background-color: #333333;
+    border: 1px solid #333333;
+    border-radius: 2px;
+    padding: 10px 20px;
+    color: #8C8C8C;
+    font-family: 'gothamthin';
+    font-weight: 600;
+    letter-spacing: -1px;
+    font-size: 13px;
+}
+.login_inputs .ant-input-affix-wrapper{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333333;
+    border: 1px solid #333333;
+}
+.login_inputs button{
+    margin-top: 40px;
+    background-color: #060A33;
+    border: 1px solid #060A33;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 13px;
+    height: auto;
+    text-align: center;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+    transition: all .4s ease-in-out;
+}
+.login_inputs button:hover{
+    background-color: rgb(15, 20, 66);
+    border: 1px solid rgb(15, 20, 66);
+}
+.login_inputs button:focus{
+    background-color: #060A33;
+    border: 1px solid #060A33;
+}
+.login_form_kmsi{
+    margin-top: 10px;
+}
+.login_form_kmsi ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: auto;
+    padding-left: 0px;
+    color: #8C8C8C;
+    font-size: 13px;
+}
+.login_form_kmsi ul a{
+    color: #8C8C8C;
+}
+.login_form_kmsi .ant-checkbox-wrapper{
+    color: #8C8C8C;
+    font-size: 13px;
+}
+.login_form_kmsi .ant-checkbox-checked::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #060A33;
+    border-radius: 2px;
+    visibility: hidden;
+    -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
+    animation: antCheckboxEffect 0.36s ease-in-out;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+    content: '';
+}
+.login_form_kmsi .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #333333;
+    border-color: #333333;
+}
+.login_form_kmsi .ant-checkbox-checked .ant-checkbox-inner::after{
+    position: absolute;
+    display: table;
+    border: 1px solid #000000;
+    border-top: 0;
+    border-left: 0;
+    -webkit-transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    opacity: 1;
+    -webkit-transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    content: ' ';
+}
+.login_footer{
+    margin-top: 30px;
+    font-size: 13px;
+}
+.login_footer ul{
+    list-style: none;
+    padding-left: 0px;
+    color: #8C8C8C;
+    margin-bottom: 0px;
+}
+ul li{
+    cursor: pointer;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+}
+.login_footer ul li span{
+    color: #ffffff;
+}
+.login_footer ul img{
+    width: 20px;
+}

@@ -1,0 +1,150 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+
+.browse_card_holder{
+    overflow: hidden;
+    padding: 20px 0px;
+}
+.browse_card_holder .card_holder{
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 100%;
+}
+.browse_card_holder .card{
+    margin-bottom: 20px;
+    margin: 10px 10px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+.browse_card_holder .card .card_img_top{
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.browse_card_holder .card .card_img_top img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+.browse_card_holder .card .card_img_top .card_img_overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.browse_card_holder .card .card_body{
+    padding: 0.5rem 0rem;
+    flex: 1 1 auto;
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.782);
+    transition: all .4s ease-in-out;
+}
+.browse_card_holder .card:hover .card_body{
+    opacity: 1;
+}
+.browse_card_holder .card .card_body .title_date ul{
+    display: flex;
+    padding-left: 0px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    list-style: none;
+    font-size: 15px;
+}
+.title_date button{
+    background-color: #060A33;
+    border: 1px solid #060A33;
+    width: auto;
+    padding: 6px 10px;
+    font-size: 11px;
+    height: auto;
+    text-align: center;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+    transition: all .4s ease-in-out;
+}
+.title_date button:hover{
+    background-color: rgb(15, 20, 66);
+    border: 1px solid rgb(15, 20, 66);
+}
+.title_date button:focus{
+    background-color: #060A33;
+    border: 1px solid #060A33;
+}
+.browse_card_holder .card .card_body{
+    text-align: center;
+}
+.browse_card_holder .card .card_body .runtime{
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'gothambook';
+}
+.browse_card_holder .card .card_body .overview{
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'gothambook';
+    font-size: 13px;
+}
+.browse_card_holder .card .card_body .release_date{
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'gothambook';
+}
+.browse_card_holder .card .card_body .release_date p:nth-child(1){
+    margin-bottom: 0px;
+    font-family: 'gothammedium';
+}
+.browse_card_holder .card .card_body .read_more{
+    padding: 10px;
+    margin-top: 10px;
+    font-family: 'gothambook';
+    text-align: center;
+}
+.read_more button{
+    margin-top: 40px;
+    background-color: #060A33;
+    border: 1px solid #060A33;
+    width: 60%;
+    padding: 6px 20px;
+    font-size: 13px;
+    height: auto;
+    text-align: center;
+    font-family: 'gothambook';
+    letter-spacing: -1px;
+    transition: all .4s ease-in-out;
+}
+.read_more button:hover{
+    background-color: rgb(15, 20, 66);
+    border: 1px solid rgb(15, 20, 66);
+}
+.read_more button:focus{
+    background-color: #060A33;
+    border: 1px solid #060A33;
+}

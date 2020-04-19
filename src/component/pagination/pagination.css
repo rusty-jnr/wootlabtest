@@ -1,0 +1,72 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+.ant-pagination-options{
+    display: none;
+}
+.ant-pagination{
+    margin: auto;
+    width: fit-content;
+}
+.ant-pagination-item {
+    display: inline-block;
+    min-width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    font-family: Arial;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    outline: 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.ant-pagination-item a{
+    color: #fff;
+}
+pagination-item:hover a {
+    color: #ffffff;
+}
+.ant-pagination-item-active {
+    font-weight: 500;
+    background-color: #008BD0;
+    border-color: #008BD0;
+}
+.ant-pagination-item-active a{
+    color: #fff;
+}
+.ant-pagination-item-active:hover a {
+    color: #ffffff;
+}
+.ant-pagination-disabled a, .ant-pagination-disabled:hover a, 
+.ant-pagination-disabled:focus a, .ant-pagination-disabled 
+.ant-pagination-item-link, .ant-pagination-disabled:hover 
+.ant-pagination-item-link, .ant-pagination-disabled:focus 
+.ant-pagination-item-link{
+    color: rgba(204, 197, 197, 0.25);
+    border-color: #d9d9d9;
+}
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+    display: block;
+    height: 100%;
+    font-size: 12px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #fff;
+}
+.ant-pagination-next:hover .ant-pagination-item-link {
+    color: #ffffff;
+    border-color: #ffffff;
+}

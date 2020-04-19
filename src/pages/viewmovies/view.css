@@ -1,0 +1,191 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+.ant-modal{
+    width: 100%!important;
+    height: 90vh !important;
+    top: 50px;
+}
+.ant-modal-content{
+    height: inherit;
+}
+.ant-modal-footer{
+    display: none;
+}
+.ant-modal-close{
+    color: #fff;
+}
+.ant-modal-body{
+    padding: 0px;
+    height: inherit;
+}
+/* .view_movies{
+    padding-top: 64px;
+    background-color: #000;
+} */
+.first-sec-post {
+    position: relative;
+}
+.movie-view-banner{
+    position: relative;
+}
+.movie-view-banner img {
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+.movie-view-banner::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(28,2,2);
+    background: radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -moz-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -webkit-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+    background: -o-radial-gradient(circle, rgba(28,2,2,1) 0%, rgba(15,15,15,0.5130427170868348) 0%, rgba(0,0,0,0.8995973389355743) 70%, rgba(0,0,0,0.927608543417367) 100%);
+}
+.movie_det{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.movie_det .title{
+    display: flex;
+    padding-top: 100px;
+}
+.movie_det .title h2{
+    font-family: 'gothambold';
+    color: #fff;
+    font-size: 3.5em;
+    margin-bottom: 0px;
+}
+.movie_det .overview{
+    text-align: center;
+    padding: 0px 40px 0px 40px;
+    width: 60%;
+}
+.movie_det .overview p{
+    font-family: 'gothambook';
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+.movie_det .details{
+    text-align: center;
+    padding: 0px 40px 0px 40px;
+    width: 60%;
+}
+.movie_det .details ul{
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    color: #fff;
+    font-family: 'gothambook';
+    font-size: 13px;
+    flex-wrap: nowrap;
+}
+.movie_det .genres{
+    text-align: center;
+    padding: 0px 40px 0px 40px;
+    width: 60%;
+}
+.movie_det .genres p{
+    margin-bottom: 0px;
+    text-align: center;
+    color: #fff;
+    font-family: 'gothambook';
+    font-size: 13px;
+}
+.movie_det .genres ul{
+    padding-left: 0px;
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    list-style: none;
+    color: #fff;
+    font-family: 'gothambook';
+    font-size: 13px;
+    flex-wrap: nowrap;
+}
+.movie_det .genres ul li{
+    padding: 10px;
+}
+.movie_det .videos{
+    padding: 0px 0px 40px 0px;
+    width: 90%;
+    margin-top: 20px;
+}
+.movie_det .videos .card_holder .card{
+    position: relative;
+}
+.movie_det .videos .card_holder .card .backdrop{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.639);
+    cursor: pointer;
+}
+.movie_det .videos .card_footer p{
+    color: #fff;
+    font-family: 'gothambook';
+    font-size: 11px;
+    text-align: left;
+    margin-top: 10px;
+    cursor: pointer;
+}
+@media(max-width: 575px) {
+    .movie_det {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .movie-view-banner img {
+        width: 100%;
+        min-height: 82vh;
+        object-fit: cover;
+    }
+    .movie_det .title {
+        display: flex;
+        margin-top: 10px;
+    }
+}
+@media(max-width: 768px){
+    .movie_det .overview{
+        text-align: center;
+        padding: 0px 40px 0px 40px;
+        width: 100%;
+    }
+    .movie_det .details{
+        text-align: center;
+        padding: 0px 40px 0px 40px;
+        width: 100%;
+    }
+    .movie_det .genres{
+        text-align: center;
+        padding: 0px 40px 0px 40px;
+        width: 100%;
+    }
+    .movie_det .videos{
+        padding: 0px 0px 0px 0px;
+        width: 95%;
+        margin-top: 20px;
+    }
+}

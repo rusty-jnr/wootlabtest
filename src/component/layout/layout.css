@@ -1,0 +1,9 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+.ant-layout-content {
+    -ms-flex: auto;
+    flex: auto;
+    min-height: 0;
+    /* padding: 30px 0px; */
+}

@@ -1,0 +1,122 @@
+@import '~antd/dist/antd.css';
+@import '../../assets//Gotham-Font/stylesheet.css';
+
+body{
+    overflow-y: auto !important;
+}
+.ant-layout-header {
+    height: 64px;
+    padding: 0 50px;
+    color: rgba(0, 0, 0, 0.65);
+    line-height: 64px;
+    background: transparent;
+    position: fixed;
+    z-index: 90;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .4s ease-in-out;
+}
+.ant-layout-header.active_header{
+    background-color: rgba(0, 0, 0, 0.836);
+}
+.logo img{
+    width: 60px;
+    margin-top: -8px;
+    display: block;
+}
+.user_name{
+    display: flex;
+    color: #ffffff;
+    font-family: 'gothambook';
+    font-size: 13px;
+    height: 100%;
+    position: relative;
+    margin-left: auto;
+}
+.drawer_icon{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.drawer_icon span{
+    background-color: #fff;
+    width: 20px;
+    height: 2px;
+    display: block;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    margin: 0px 3px 3px 3px;
+    border-radius: 5px;
+}
+.drawer_icon.active span:nth-of-type(1){
+    margin-left: 10px;
+}
+.drawer_icon.active span:nth-of-type(2){
+    margin-left: 0px;
+}
+.drawer_icon.active span:nth-of-type(3){
+    margin-left: 10px;
+}
+.user_content{
+    position: absolute;
+    top: 50px;
+    width: auto;
+    margin-left: -10px;
+    background-color: #17171B;
+    animation: showcontent .6s;
+}
+@keyframes showcontent{
+    from{
+        opacity: 0;
+        transition: all .4s ease-in-out;
+        margin-left: -60px;
+    }
+    to{
+        opacity: 1;
+        margin-right: -50px;
+    }
+}
+.user_content ul, .hidden_content ul{
+    padding-left: 0px;
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0px 60px 0px 10px;
+}
+.user_content ul li, .hidden_content ul li{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: -webkit-fill-available;
+    height: -moz-fill-available;
+    height: -ms-fill-available;
+    height: -o-fill-available;
+    font-family: 'gothambook';
+    transition: all .4s ease-in-out;
+    height: 40px;
+}
+.user_content ul li:hover{
+    color: #707070;
+}
+.user_content ul li p, .hidden_content ul li p{
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+.user_content hr, .hidden_content hr{
+    border-color: #707070;
+    margin: 0px;
+}
+.hidden_content{
+    opacity: 0;
+    z-index: -5;
+    transition: all .6s ease-in-out;
+    position: absolute;
+    top: 50px;
+    width: auto;
+    margin-left: -60px;
+    visibility: hidden;
+ }
