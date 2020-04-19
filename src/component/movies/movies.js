@@ -31,6 +31,7 @@ const Movies = ({ posts }) => {
             })
             alert('Movie added to favourite successfully')
             setCount(count + 1)
+            window.location.reload()
         }
         
     }
@@ -50,6 +51,7 @@ const Movies = ({ posts }) => {
             })
             alert('Movie removed successfully from favourites')
             setCount(count + 1)
+            window.location.reload();
         }
         
     }
