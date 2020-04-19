@@ -55,7 +55,6 @@ const View = () => {
                     <div className="movie_det">
                         <div className="title">
                             <h2>{fetchedMovie.title}</h2>
-                            <h2> - Title</h2>
                         </div>
                         <div className="overview">
                             <p>{fetchedMovie.overview}

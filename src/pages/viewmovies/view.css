@@ -156,6 +156,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #141924;
     }
     .movie-view-banner img {
         width: 100%;
@@ -165,6 +166,13 @@
     .movie_det .title {
         display: flex;
         margin-top: 10px;
+        padding-top: 0px;
+    }
+    .movie_det .title h2 {
+        font-family: 'gothambold';
+        color: #fff;
+        font-size: 2.5em;
+        margin-bottom: 0px;
     }
 }
 @media(max-width: 768px){
