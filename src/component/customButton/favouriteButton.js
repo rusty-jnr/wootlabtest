@@ -1,52 +1,88 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import Cookies from 'js-cookie'
 import { Button } from 'antd';
 
-function FavouriteButton(props) {
+function FavouriteButton({ favourite, updateFavourites, cookie, post }) {
 
-    const [cookie, setCookie] = useState('');
     const [isfavorite, setIsfavorite] = useState(null)
-    const [isLoading, setIsLoading] = useState(false);
+    const toggleIsFavourite = () => setIsfavorite(!isfavorite)
+
+    const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
-        setCookie(Cookies.get('id'))
-        if(cookie){
-            const fetchBookList = async () => {
-                setIsLoading(true)
-                const { data } = await axios(`https://wootlab-moviedb.herokuapp.com/api/movie/favorites/${cookie}`);
-                data.forEach(post => {
-                    if(post.id === props.id){
-                        setIsfavorite(true)
-                    }
+        setIsfavorite(favourite)
+    }, [favourite])
+
+    const addToFavourite = async (e) => {
+        if (cookie) {
+            setIsLoading(true)
+            try {
+                let { status } = await axios.post("http://wootlab-moviedb.herokuapp.com/api/movie/favorite/add", {
+                    movieId: e,
+                    userId: cookie
                 })
+                if (status === 200) {
+                    alert('Movie Added Successfully')
+                    toggleIsFavourite()
+                    setIsLoading(false)
+                    updateFavourites()
+                } else {
+                    alert('Something went wrong, please try again')
+                    setIsLoading(false)
+                }
+            } catch (e) {
+                alert('Something went wrong, please try again')
                 setIsLoading(false)
             }
-    
-            fetchBookList();
+            // window.location.reload()
         }
-    }, [cookie, props.id, props.count])
 
-    return(
+    }
 
-        <>
-            {isLoading ? 
-                <div style={{ color: '#fff' }}>Loading ...</div>
-             : 
-             <div>
-                {
-                    !isfavorite ?
-                    <Button type="primary" onClick={e => props.addToFavourite(props.id)}>Add to Favourite</Button>
-                    
-                        :
-                    <Button type="primary" onClick={e => props.removeFromFavourite(props.id)}>Remove from Favourite</Button>
+    const removeFromFavourite = async (e) => {
+        if (cookie) {
+            setIsLoading(true)
+            try {
+                let { status } = await axios.put("http://wootlab-moviedb.herokuapp.com/api/movie/favorite/remove", {
+                    movieId: e,
+                    userId: cookie
+                })
+                if (status === 200) {
+                    setIsLoading(false)
+                    alert('Movie Removed Successfully')
+                    toggleIsFavourite()
+                    updateFavourites()
+                } else {
+                    setIsLoading(false)
+                    alert('Something went wrong, please try again')
                 }
-             </div>
-                
+            } catch (e) {
+                setIsLoading(false)
+                alert('Something went wrong, please try again')
             }
-            
+            // window.location.reload();
+        }
+
+    }
+
+    return (
+        <>
+            {isLoading ?
+                <div style={{ color: '#fff' }}>Loading ...</div>
+                :
+                <div>
+                    {
+                        !isfavorite ?
+                            <Button type="primary" onClick={e => addToFavourite(post)}>Add to Favourite</Button>
+                            :
+                            <Button type="primary" onClick={e => removeFromFavourite(post)}>Remove from Favourite</Button>
+                    }
+                </div>
+
+            }
+
         </>
-        
+
     );
 }
 

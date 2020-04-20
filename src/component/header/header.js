@@ -16,26 +16,21 @@ const Header = () => {
     const [showPopOver, setShowPopOver] = useState(false)
 
     useEffect(() => {
-        window.addEventListener('scroll', () => {
+        function headerScroll() {
             let isTop = window.scrollY;
-            if(isTop > 0){
+            if (isTop > 0) {
                 setScroll(true)
-            }else{
+            } else {
                 setScroll(false)
             }
-        });
+        }
+        window.addEventListener('scroll', headerScroll);
 
-        window.removeEventListener('scroll', () => {
-            let isTop = window.scrollY;
-            if(isTop === true){
-                setScroll(true)
-                console.log(isTop)
-            }else{
-                setScroll(false)
-                console.log(isTop)
-            }
-        });
-    },[location])
+        return function cleanupListener() {
+            window.removeEventListener('scroll',headerScroll);
+        };
+
+    }, [location])
 
     const showMenu = () => {
         setShowPopOver(!showPopOver)
@@ -46,8 +41,8 @@ const Header = () => {
         Cookies.remove('id')
         history.push("/")
     }
-    
-    return(
+
+    return (
         <div>
             <Header className={`${scroll === false ? '' : 'active_header'}`}>
                 <div className={`account_style `}>
@@ -56,7 +51,7 @@ const Header = () => {
                             <img src={logo} alt="" />
                         </NavLink>
                     </div>
-                </div>   
+                </div>
 
                 <div className="user_name">
 
@@ -67,7 +62,7 @@ const Header = () => {
                         <span></span>
                         <span></span>
                     </div>
-                    
+
                     <div className={` ${showPopOver === false ? 'hidden_content' : 'user_content'}`}>
                         <ul>
                             <NavLink exact to="/favourite">
@@ -84,7 +79,7 @@ const Header = () => {
                         </ul>
                     </div>
 
-                </div> 
+                </div>
             </Header>
         </div>
     );

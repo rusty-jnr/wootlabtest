@@ -6,7 +6,7 @@ import wootmovie from '../../assets/img/wootmovie.png'
 import Movies from '../../component/movies/movies'
 import Paginate from '../../component/pagination/pagination'
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
     const [posts, setPosts] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
