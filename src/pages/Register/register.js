@@ -4,7 +4,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import { Row, Col, Input, Button } from 'antd';
 import logo from '../../assets/img/logo.svg'
 import loginlogo from '../../assets/img/user.svg'
-import LogRegLayout from '../../component/nouserlayout/Layout'
+import SiteLayout from '../../component/layout/Layout'
 
 const Register = () => {
 
@@ -66,7 +66,7 @@ const Register = () => {
     }
 
     return(
-        <LogRegLayout>
+        <SiteLayout>
             <div>
                 <div className="login_banner">
                 
@@ -118,7 +118,7 @@ const Register = () => {
                 
                 </div>
             </div>
-        </LogRegLayout>
+        </SiteLayout>
     );
 }
 
