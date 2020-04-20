@@ -13,6 +13,7 @@ const Login = () => {
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [loader, setLoader] = useState(false)
 
     const userNameChange = (e) => {
         setUserName(e.target.value)
@@ -23,7 +24,9 @@ const Login = () => {
     }
 
     const login = () => {
+        setLoader(true)
         if(userName === '' || password === ''){
+            setLoader(false)
             setError('All fields are Required!!')
             setTimeout(function(){
                 setError('')
@@ -44,6 +47,7 @@ const Login = () => {
             .then(response => {
                 setUserName('')
                 setPassword('')
+                setLoader(false)
                 Cookies.set('id', response.id)
                 Cookies.set('username', response.username)
                 history.push("/home")
@@ -85,7 +89,14 @@ const Login = () => {
                                     </div>
                                     <Input placeholder="Username" onChange={userNameChange} />
                                     <Input.Password placeholder="Password" onChange={passwordChange} />
-                                    <Button type="primary" onClick={login}>Sign In</Button>
+                                    {
+                                        loader 
+                                            ?
+                                        <Button type="primary" disabled>Sign In</Button>
+                                            :
+                                        <Button type="primary" onClick={login}>Sign In</Button>
+                                    }
+                                    
                                 </div>
 
                                 {/* <div className="login_form_kmsi">
