@@ -19,8 +19,6 @@ const Movies = ({ posts }) => {
         const getFavourites = async () => {
             if (cookie) {
                 const { data } = await axios(`https://wootlab-moviedb.herokuapp.com/api/movie/favorites/${cookie}`);
-                console.log(data)
-                console.log(`this`)
                 setFavourites(data.map(x => x.id));
             }
         }
@@ -31,7 +29,6 @@ const Movies = ({ posts }) => {
         const getFavourites = async () => {
             if (cookie) {
                 const { data } = await axios(`https://wootlab-moviedb.herokuapp.com/api/movie/favorites/${cookie}`);
-                console.log(data)
                 setFavourites(data.map(x => x.id));
             }
         }
