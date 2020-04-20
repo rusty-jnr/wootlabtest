@@ -17,7 +17,7 @@ function FavouriteButton({ favourite, updateFavourites, cookie, post }) {
         if (cookie) {
             setIsLoading(true)
             try {
-                let { status } = await axios.post("http://wootlab-moviedb.herokuapp.com/api/movie/favorite/add", {
+                let { status } = await axios.post("https://wootlab-moviedb.herokuapp.com/api/movie/favorite/add", {
                     movieId: e,
                     userId: cookie
                 })
@@ -43,7 +43,7 @@ function FavouriteButton({ favourite, updateFavourites, cookie, post }) {
         if (cookie) {
             setIsLoading(true)
             try {
-                let { status } = await axios.put("http://wootlab-moviedb.herokuapp.com/api/movie/favorite/remove", {
+                let { status } = await axios.put("https://wootlab-moviedb.herokuapp.com/api/movie/favorite/remove", {
                     movieId: e,
                     userId: cookie
                 })
