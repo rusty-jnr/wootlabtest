@@ -85,14 +85,7 @@ const Login = () => {
                                     </div>
                                     <Input placeholder="Username" onChange={userNameChange} />
                                     <Input.Password placeholder="Password" onChange={passwordChange} />
-                                    {
-                                        loader 
-                                            ?
-                                        <Button type="primary" disabled>Sign In</Button>
-                                            :
-                                        <Button type="primary" onClick={login}>Sign In</Button>
-                                    }
-                                    
+                                    <Button type="primary" onClick={login}>Sign In</Button>
                                 </div>
 
                                 {/* <div className="login_form_kmsi">
