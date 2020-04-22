@@ -88,7 +88,7 @@ const View = () => {
                                         <div className="card_holder">
                                             <div className="card" onClick={e => showModal(video.key)}>
                                                 <div className="card_img_top">
-                                                    <iframe src={`http://www.youtube.com/embed/${video.key}`}
+                                                    <iframe src={`https://www.youtube.com/embed/${video.key}`}
                                                     width="100%" height="100%" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" title="movies" allowFullScreen></iframe>
                                                 </div>
                                                 <div className="backdrop"></div>
@@ -110,7 +110,7 @@ const View = () => {
                     visible={visible}
                     onCancel={handleCancel}
                     >
-                        <iframe src={`http://www.youtube.com/embed/${link}`}
+                        <iframe src={`https://www.youtube.com/embed/${link}`}
                         width="100%" height="100%" frameBorder="0" title="movies" allowFullScreen></iframe>
                     </Modal>
 
